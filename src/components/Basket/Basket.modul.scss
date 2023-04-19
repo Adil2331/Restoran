@@ -1,0 +1,131 @@
+.basket {
+  display: flex;
+  // height: 100vh;
+}
+
+.basket__header {
+  display: flex;
+  width: 100%;
+  min-height: 63vh;
+  flex-direction: column;
+}
+
+.basket-nav {
+  display: flex;
+  gap: 30px;
+  max-width: 100%;
+  justify-content: flex-end;
+  margin-right: 30px;
+  margin-top: 30px;
+  li:hover {
+    border-bottom: 1px solid #333;
+  }
+}
+
+.basket__inner {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // min-height: 40vh;
+  h3 {
+    margin-bottom: 60px;
+    font-size: 35px;
+    font-weight: 700;
+  }
+}
+
+// .basket__inner-header {
+//   display: flex;
+//   justify-content: space-between;
+//   // gap: 200px;
+//   min-width: 400px;
+//   margin-bottom: 60px;
+//
+// }
+// ul {
+//   display: flex;
+//   // justify-content: space-between;
+// }
+
+.basket__inner-items {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid black;
+    ul {
+      display: flex;
+      flex-direction: column;
+      border: none;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 10px;
+      p {
+        font-size: 32px;
+      }
+      span {
+        padding: 10px;
+        // font-size: 20px;
+      }
+      button {
+        //   height: 42px;
+        // padding: 10px 20px;
+        // padding: 5px 10px;
+        width: 30px;
+        height: 30px;
+        background-color: #b59571;
+        border-radius: 50%;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.basket__bottom {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  button {
+    padding: 10px 20px;
+    background-color: #b59571;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 650px) {
+  .basket {
+    flex-direction: column;
+  }
+  .basket-nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .basket__inner-items {
+    gap: 30px;
+    ul {
+      flex-direction: column;
+      // gap: 30px;
+      ul {
+        margin-right: 0;
+        margin-bottom: 10%;
+      }
+      p {
+        margin: 10px;
+      }
+    }
+  }
+}

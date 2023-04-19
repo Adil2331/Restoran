@@ -1,0 +1,62 @@
+button,
+textarea,
+input,
+select,
+img,
+svg,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.light {
+  background-color: white;
+  color: black;
+  transition: 500ms linear;
+}
+
+.black {
+  background-color: #292929;
+  color: white;
+  transition: 500ms linear;
+  .delivery__link {
+    color: black;
+  }
+  .food-nav,
+  .basket-nav,
+  .delivery-nav {
+    li:hover {
+      border-bottom: 1px solid white;
+    }
+  }
+  // .input_dark {
+  //   ::placeholder {
+  //     color: white;
+  //   }
+  // }
+}

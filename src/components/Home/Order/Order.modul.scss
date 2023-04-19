@@ -1,0 +1,129 @@
+.order__subtitle::after {
+  content: "";
+  border: 1px solid #b59571;
+  display: block;
+  width: 60px;
+  position: absolute;
+  top: 15px;
+  left: 140px;
+}
+
+.order__inner {
+  display: flex;
+  gap: 24px;
+}
+
+.order__nav {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  gap: 50px 32px;
+  position: relative;
+  z-index: 3;
+}
+
+.order__title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #b59571;
+}
+
+.order__inner-con {
+  margin-top: 130px;
+  background-color: #5b5b5b;
+  color: #fff;
+  padding: 40px;
+  position: static;
+  // position: relative;
+  // position: absolute;
+  // right: 40%;
+  z-index: 3;
+  div {
+    display: flex;
+    gap: 20px;
+    // flex-wrap: wrap;
+    // align-content: center;
+    // align-items: center;
+  }
+}
+
+// .order__inner-con::after {
+//   content: "";
+
+//   background-image: url("../../../assets/img/order.svg");
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   position: absolute;
+// }
+
+.order__inner-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order__inner-title {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.order__inner-text-2 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.order__btn {
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #5b5b5b;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.order__btn:hover {
+  background-color: #b59571;
+  border: 1px solid #b59571;
+}
+
+.order-img {
+  // position: relative;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 100px;
+  right: 80px;
+  z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  .order-img {
+    display: none;
+  }
+  .order__inner {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 920px) {
+  .order__inner-con {
+    margin-top: 70px;
+  }
+  .order__nav {
+    margin-top: 80px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .order__inner {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .order__inner-con {
+    margin-top: 0;
+  }
+}
