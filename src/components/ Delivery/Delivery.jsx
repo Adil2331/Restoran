@@ -65,6 +65,11 @@ function Delivery() {
                   }
                   return (
                     <div key={i} className="delivery__inner-items">
+                      <h2>
+                        Номер заказа{" "}
+                        {/* {data.length > 1 ? data.length + 1 : data.length} */}
+                        {/* {data.reduce((a, b) => a + b., 0)} */}
+                      </h2>
                       <p>Заказ был создан {date}</p>
                       <p>Осталось времяни: ~{timeLeft} мин</p>
                       <p>

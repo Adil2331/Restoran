@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 // import { setBuy } from "../Redux/basketSlice";
 // import { setItems } from "../Redux/deliverySlice";
 import { setData } from "../Redux/testSlice";
+import { setReset } from "../Redux/basketSlice";
 
 const style = {
   position: "absolute",
@@ -49,6 +50,20 @@ export default function BasketModal({ open, setOpen, totalPrice }) {
   // console.log("items", items);
   // console.log("test", data);
   // console.log(text1, text2);
+  const toggleOrder = () => {
+    dispatch(
+      setData({
+        text1,
+        text2,
+        totalPrice,
+        basket,
+        createTime: new Date().getTime(),
+        delivery: false,
+      })
+    );
+    dispatch(setReset());
+    setOpen(false);
+  };
   return (
     <div>
       <Modal
@@ -102,17 +117,18 @@ export default function BasketModal({ open, setOpen, totalPrice }) {
             {totalPrice} ₽
           </Typography>
           <button
-            onClick={() =>
-              dispatch(
-                setData({
-                  text1,
-                  text2,
-                  totalPrice,
-                  basket,
-                  createTime: new Date().getTime(),
-                  delivery: false,
-                })
-              )
+            onClick={
+              () => toggleOrder()
+              // dispatch(
+              //   setData({
+              //     text1,
+              //     text2,
+              //     totalPrice,
+              //     basket,
+              //     createTime: new Date().getTime(),
+              //     delivery: false,
+              //   })
+              // )
             }
             style={{
               border: "none",
